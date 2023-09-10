@@ -1,0 +1,28 @@
+{
+  "name": "express-typescript-starter",
+  "version": "1.0.0",
+  "description": "Basic starter for building RESTful API with express.js & Typescript.",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon",
+    "build": "rimraf ./build && tsc",
+    "start": "npm run build && node build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omarxsaeed/express-typescript-starter.git"
+  },
+  "author": "Omar Saeed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/omarxsaeed/express-typescript-starter/issues"
+  },
+  "homepage": "https://github.com/omarxsaeed/express-typescript-starter#readme",
+  "devDependencies": {
+    "@types/node": "^20.6.0",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
