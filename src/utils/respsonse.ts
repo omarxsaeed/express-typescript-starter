@@ -8,7 +8,7 @@ import { Response } from "express";
  * @param data The data to include in the response.
  * @param res The Express.js Response object to which the response will be sent.
  */
-function respondWith(status: boolean, message: string, statusCode: number, data: any, res: Response) {
+function respondWith<T>(status: boolean, message: string, statusCode: number, data: T, res: Response) {
   res.status(statusCode).json({
     status,
     message,
@@ -22,7 +22,7 @@ function respondWith(status: boolean, message: string, statusCode: number, data:
  * @param data The data to include in the successful response.
  * @param res The Express.js Response object to which the response will be sent.
  */
-export function sendSuccessResponse(statusCode: number, data: any, res: Response) {
+export function sendSuccessResponse<T>(statusCode: number, data: T, res: Response) {
   respondWith(true, "success", statusCode, data, res);
 }
 
@@ -33,6 +33,6 @@ export function sendSuccessResponse(statusCode: number, data: any, res: Response
  * @param errors Any error or additional data to include in the response.
  * @param res The Express.js Response object to which the response will be sent.
  */
-export function sendFailureResponse(statusCode: number, message: string, errors: any, res: Response) {
+export function sendFailureResponse(statusCode: number, message: string, errors: Error[], res: Response) {
   respondWith(false, message, statusCode, errors, res);
 }
