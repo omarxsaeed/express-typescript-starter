@@ -12,7 +12,7 @@ function respondWith<T>(status: boolean, message: string, statusCode: number, da
   res.status(statusCode).json({
     status,
     message,
-    data,
+    data
   });
 }
 

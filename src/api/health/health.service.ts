@@ -4,7 +4,7 @@ const check = () => {
   return {
     uptime: getUptime(),
     message: "Server's healthy and running ⚡!",
-    date: new Date(),
+    date: new Date()
   };
 };
 
